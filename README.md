@@ -1,5 +1,9 @@
 # Aprimo.PublicLinks.Export
 
+### Considerations
+- Currently the app does not support passing in a destination folder. It uses the value found in Program.cs's destinationFolder variable.
+
+
 ### Configuration
 
 ##### app.config
