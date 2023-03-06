@@ -1,7 +1,11 @@
 # Aprimo.PublicLinks.Export
 
+### Usage
+- Navigate to the programs bin/(Debug or Release)/ folder
+- command: Aprimo.PublicLinks.Exports.exe
+
 ### Considerations
-- Currently the app does not support passing in a destination folder. It uses the value found in Program.cs's destinationFolder variable.
+- Currently this app does not support passing in a destination folder. It will use the value in the destinationFolder variable in Program.cs
 
 
 ### Configuration
