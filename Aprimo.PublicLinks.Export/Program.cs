@@ -24,7 +24,7 @@ namespace Aprimo.PublicLinks.Export
         // -Destination - folder to save the new .csv to
         // -Name - name of the new csv. full path will be destination/name.csv
         private static AprimoRESTApi aprimoAPI;
-        private static string destinationFolder = "C:\\Users\\James.Ratini\\OneDrive - Aprimo US, LLC\\Documents\\AprimoPublicCDNExport";
+        private static string destinationFolder = ConfigurationManager.AppSettings.Get("DestinationFolder");
         private static string nameofCSV = "export_" + DateTime.Now.ToString("yyyy-MM-dd") + ".csv";
         private static int delayBetweenCalls = 5000;
         static void Main(string[] args)
