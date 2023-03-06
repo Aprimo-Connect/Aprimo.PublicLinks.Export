@@ -5,7 +5,7 @@
 - command: Aprimo.PublicLinks.Exports.exe
 
 ### Considerations
-- Currently this app does not support passing in a destination folder. It will use the value in the destinationFolder variable in Program.cs
+- Currently this app does not support passing in a destination folder. It will use the value in the destinationFolder variable in app.config
 
 
 ### Configuration
@@ -16,7 +16,4 @@
    - AprimoClientID
    - AprimoClientSecret
    - AprimoTenant
-   
-##### Program.cs
-- destinationFolder - The folder destination the export should be saved to
-- nameofCSV - the name of the exported CSV to be saved to destinationFolder
+   - DestinationFolder
