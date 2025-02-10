@@ -19,24 +19,14 @@ namespace Aprimo.PublicLinks.Export
         private static string ClientSecret = ConfigurationManager.AppSettings.Get("AprimoClientSecret");
         private static string AprimoTenant = ConfigurationManager.AppSettings.Get("AprimoTenant");
 
-        private static string basicAuthString = "dGNoYXdsYTo3MTU5ZTAzYTc5Mzk0MWRiYTYxOWIxOTViZjBjMDIwZA==";
+        private static string basicAuthString = "";
         private static string loginUrl = "/login/connect/token";
         private static string accessToken = "";
-
-        // Test with productstrategy1 before going to knowledge libray
-       /* private static string username = "jratini";
-        private static string ClientCredentialsClientID = "RN8G5ECT-RN8G";
-        private static string oldMethodClientID = "RY3WL3AR-RY3W";
-        private static string clientSecret = "aprimo123";
-        private static string aprimoTenant = "productstrategy1";
-        private static string loginUrl = "/api/oauth/create-native-token";
-        private string basicAuthString = "anJhdGluaUludGVncmF0aW9uOjI3MGJkODBhNjEyNzQzMDBiZDVmMGVkMTlkMmQ1ZjY5";*/
 
         public bool getAccessTokenClientCredentials()
         {
             HttpClient client = new HttpClient();
             string tokenUrl = $"https://{AprimoTenant}.aprimo.com{loginUrl}";
-            string retVal = "";
             List<KeyValuePair<string, string>> requestBody = new List<KeyValuePair<string, string>>();
 
             requestBody.Add(new KeyValuePair<string, string>("grant_type", "client_credentials"));
